@@ -1,0 +1,7 @@
+- hosts: local
+  become: yes
+  tasks:
+  - name: Install wget
+    yum: name=wget update_cache=true
+  - name: get package
+    shell: "wget https://github.com/sonyxperiadev/kernel/tree/aosp/LA.BR.1.3.3_rb2.14/firmware/3com/typhoon.bin.ihex"

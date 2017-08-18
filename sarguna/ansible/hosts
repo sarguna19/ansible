@@ -1,8 +1,8 @@
 [local]
-centos@192.168.56.104
+centos@192.168.56.104 ansible_ssh_extra_args='-o StrictHostKeyChecking=no'
 
 
 [server]
-centos@192.168.56.104 ansible_ssh_pass=centos
-centos@192.168.56.104 ansible_sudo_pass=centos
+centos@192.168.56.104 ansible_ssh_pass=centos ansible_ssh_user=centos ansible_ssh_extra_args='-o StrictHostKeyChecking=no'
+centos@192.168.56.104 ansible_sudo_pass=centos ansible_ssh_user=centos ansible_ssh_extra_args='-o StrictHostKeyChecking=no'
 

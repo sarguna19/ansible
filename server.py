@@ -1,13 +1,10 @@
 #!/usr/bin/env python
 import web
-import xml.etree.ElementTree as ET
 import json
 from subprocess import call
 
 
 
-tree = ET.parse('user_data.xml')
-root = tree.getroot()
 
 urls = (
     '/users', 'list_users',
